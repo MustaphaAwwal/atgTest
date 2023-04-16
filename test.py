@@ -1,4 +1,8 @@
 import unittest
+
+import collections
+collections.Callable = collections.abc.Callable
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -6,13 +10,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-class TestATGWorld(unittest.TestCase):
+class test_ATGWorld(unittest.TestCase):
 	def setUp(self):
 		self.chrome_options = Options()
 		self.chrome_options.add_argument('--headless')
 		self.chrome_options.add_argument('--no-sandbox')
 		self.chrome_options.add_argument('--disable-dev-shm-usage')
-		self.driver = webdriver.Chrome(service=Service('/usr/bin/chromedriver'), options=self.chrome_options)
+		self.driver = webdriver.Chrome(service=Service('./chromedriver'), options=self.chrome_options)
 
 	def test_atg_website(self):
 		self.driver.get("https://atg.world/")
