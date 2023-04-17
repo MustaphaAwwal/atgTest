@@ -16,6 +16,10 @@ class test_ATGWorld(unittest.TestCase):
 		
 		self.chrome_options.add_argument('--no-sandbox')
 		self.chrome_options.add_argument('--disable-setuid-sandbox')
+		self.chrome_options.add_argument('--disable-gpu')
+		self.chrome_options.add_argument('--allow-insecure-localhost')
+		self.chrome_options.add_argument('--ignore-certificate-errors')
+		self.chrome_options.add_argument('--allow-running-insecure-content')
 		self.driver = webdriver.Chrome(service=Service('/usr/bin/chromedriver'), options=self.chrome_options)
 
 	def test_atg_website(self):
