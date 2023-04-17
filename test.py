@@ -14,9 +14,6 @@ class test_ATGWorld(unittest.TestCase):
 	def setUp(self):
 		self.chrome_options = Options()
 		
-		self.chrome_options.switches="""--start-maximized;--test-type;--no-sandbox;--ignore-certificate-errors;
-                   --disable-popup-blocking;--disable-default-apps;--disable-extensions-file-access-check;
-                   --incognito;--disable-infobars,--disable-gpu"""
 		
 		self.chrome_options.add_argument('--window-size=1920,1080')
 		self.chrome_options.add_argument('--allow-insecure-localhost')
