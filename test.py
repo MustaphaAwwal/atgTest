@@ -15,11 +15,10 @@ class test_ATGWorld(unittest.TestCase):
 		self.chrome_options = Options()
 		
 		
-		self.chrome_options.add_argument('--window-size=1920,1080')
-		self.chrome_options.add_argument('--allow-insecure-localhost')
 		self.chrome_options.add_argument('--headless')
-		self.chrome_options.add_argument('--disable-gpu')
 		self.chrome_options.add_argument('--no-sandbox')
+		self.chrome_options.add_argument('--allow-insecure-localhost')
+		self.chrome_options.add_argument('--disable-gpu')
 		self.chrome_options.add_argument('--ignore-certificate-errors')
 		self.chrome_options.add_argument('--allow-running-insecure-content')
 		self.chrome_options.add_argument('--disable-setuid-sandbox')
