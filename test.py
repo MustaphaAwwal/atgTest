@@ -22,7 +22,7 @@ class test_ATGWorld(unittest.TestCase):
 # 		self.chrome_options.add_argument('--allow-running-insecure-content')
 # 		self.chrome_options.add_argument('--disable-setuid-sandbox')
 #		self.chrome_options.add_argument('--disable-dev-shm-usage')
-#		self.driver = webdriver.Chrome(service=Service('/usr/bin/chromedriver'), options=self.chrome_options)
+		self.driver = webdriver.Chrome(service=Service('/usr/bin/chromedriver'), options=self.chrome_options)
 
 	def test_atg_website(self):
 		self.driver.get("https://atg.world/")
