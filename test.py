@@ -18,11 +18,7 @@ class test_ATGWorld(unittest.TestCase):
 		self.chrome_options.add_argument('--headless'); 
 		self.chrome_options.add_argument('--disable-dev-shm-usage') 
 		self.chrome_options.add_argument('--window-size=1920x1080')
-		self.chrome_options.add_argument('--disable-setuid-sandbox')
-		self.chrome_options.add_argument('--disable-gpu')
-		self.chrome_options.add_argument('--allow-insecure-localhost')
-		self.chrome_options.add_argument('--ignore-certificate-errors')
-		self.chrome_options.add_argument('--allow-running-insecure-content')
+		
 		
 		self.driver = webdriver.Chrome(service=Service('/usr/bin/chromedriver'), options=self.chrome_options)
 
