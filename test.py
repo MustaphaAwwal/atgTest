@@ -18,8 +18,26 @@ class test_ATGWorld(unittest.TestCase):
                    --disable-popup-blocking;--disable-default-apps;--disable-extensions-file-access-check;
                    --incognito;--disable-infobars,--disable-gpu"""
 		
+		WebDriverManager.chromedriver().setup();
+ChromeOptions options = new ChromeOptions();
+options.addArguments("--window-size=1920,1080");
+options.addArguments("--allow-insecure-localhost");
+options.addArguments("--headless");
+options.addArguments();
+options.addArguments("");
+options.addArguments("--ignore-certificate-errors");
+options.addArguments("--allow-running-insecure-content");
+options.addArguments("--disable-setuid-sandbox");
+options.addArguments("--disable-dev-shm-usage");
+driver = new ChromeDriver(options);
+DriverManager.setDriver(driver);
+		self.chrome_options.add_argument('--window-size=1920,1080')
+		self.chrome_options.add_argument('--allow-insecure-localhost')
 		self.chrome_options.add_argument('--headless')
+		self.chrome_options.add_argument('--disable-gpu')
 		self.chrome_options.add_argument('--no-sandbox')
+		self.chrome_options.add_argument('--ignore-certificate-errors')
+		self.chrome_options.add_argument('--disable-dev-shm-usage')
 		self.chrome_options.add_argument('--disable-dev-shm-usage')
 		self.driver = webdriver.Chrome(service=Service('./chromedriver'), options=self.chrome_options)
 
