@@ -15,6 +15,7 @@ class test_ATGWorld(unittest.TestCase):
 		self.chrome_options = Options()
 		
 		self.chrome_options.add_argument('--no-sandbox')
+		self.chrome_options.add_argument('--disable-dev-shm-usage')
 		self.driver = webdriver.Chrome(service=Service('/usr/bin/chromedriver'), options=self.chrome_options)
 
 	def test_atg_website(self):
