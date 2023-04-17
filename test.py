@@ -13,6 +13,11 @@ from selenium.webdriver.support import expected_conditions as EC
 class test_ATGWorld(unittest.TestCase):
 	def setUp(self):
 		self.chrome_options = Options()
+		
+		self.chrome_options.switches="""--start-maximized;--test-type;--no-sandbox;--ignore-certificate-errors;
+                   --disable-popup-blocking;--disable-default-apps;--disable-extensions-file-access-check;
+                   --incognito;--disable-infobars,--disable-gpu"""
+		
 		self.chrome_options.add_argument('--headless')
 		self.chrome_options.add_argument('--no-sandbox')
 		self.chrome_options.add_argument('--disable-dev-shm-usage')
