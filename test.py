@@ -15,7 +15,7 @@ class test_ATGWorld(unittest.TestCase):
 		self.chrome_options = Options()
 		
 		
-		self.chrome_options.add_argument('--headless'); 
+		 
 		
 		
 		self.driver = webdriver.Chrome(service=Service('/usr/bin/chromedriver'), options=self.chrome_options)
